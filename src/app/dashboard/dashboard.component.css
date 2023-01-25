@@ -1,0 +1,45 @@
+.main_body{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.left_side{
+    margin-top: 5rem;
+    margin-left: 2rem;
+}
+.right_side{
+    margin-top: 5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.form{
+    display: grid;
+    gap: 1rem;
+}
+.form input{
+    text-align: center;
+    margin-left: 3rem;
+    font-size: 3rem;
+}
+.nav-item{
+    list-style-type:none ;
+    margin-right: 5rem;
+}
+h1{
+    margin-left: 7rem;
+}
+.fund{
+    margin: 0;
+    color: brown;
+}
+.dropdown-item{
+    cursor: pointer;
+}
+.container .row{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.loading{
+    width: 600px;
+    height: 250px;
+}

@@ -1,0 +1,36 @@
+<!-- header -->
+<app-header></app-header>
+
+<!-- login page -->
+<div class="row">
+    <div class="col-7">
+        <!-- image -->
+        <img class="m-4" height="500px" src="https://tse1.mm.bing.net/th?id=OIP.BoUxxntvXdVodZuAFxJYzAHaHX&pid=Api&P=0" alt="login image">
+    </div>
+    <div class="col-5">
+        <form (ngSubmit)="login()" [formGroup]="loginForm" class="border p-5 mt-5 me-5">
+            <div class="mb-2">
+                <input name="acno" formControlName="acno" placeholder="Account Number" type="text" class="form-control">
+            </div>
+            <!-- invalid accno -->
+            <div *ngIf="this.loginForm.get('acno')?.errors&&this.loginForm.get('acno')?.touched" class="text-danger mb-2">Invalid Account Number</div>
+            <div class="mt-2">
+                <input name="pswd" formControlName="pswd" type="password" placeholder="Password" class="form-control">
+            </div>  
+            <!-- error messgae -->
+            <div class="text-danger">{{errorMsg}}</div>
+            <div class="mt-4">
+                <button  type="submit" class="btn btn-primary">
+                    Login
+                    <span *ngIf="successMsg" class="spinner-border text-light" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </span>
+                </button>
+                &nbsp;
+                <span>
+                    New User? Click Here to <a routerLink="/register">Register</a>
+                </span>
+            </div>
+        </form>
+    </div>
+</div>

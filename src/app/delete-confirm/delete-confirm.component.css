@@ -1,0 +1,7 @@
+.container{
+    width: 50%;
+    background: rgba(84, 74, 212, 0.9);
+    color: white;
+    border-radius: .5rem;
+    box-shadow: 0 .5rem 1rem rgba(0,0.0,.1);
+}
